@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK LFT Distribution System
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">User Account Login</h1>
+
+      <div class="govuk-form-group">
+        <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m"  for="event-name">
+            Enter your Username
+          </label>
+        </h4>
+        <input class="govuk-input govuk-input--width-20" id="username" name="username" type="text">
+      </div>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+            Enter your password
+          </label>
+        </h1>
+        <input class="govuk-input govuk-input--width-20" id="password" name="password" type="password">
+      </div>
+      
+      
+      <script type="text/javascript">
+        function checklogin(){
+        let username = document.getElementById("username").value
+        let password = document.getElementById("password").value
+        
+        if(username == "supplier") window.location="/dashboard/supplier";
+        else if (username == "pharmacy") window.location="/dashboard/pharmacy";
+        else window.location="/auth/register";
+        }
+      </script>
+
+
+<button id="loginbutton" onclick="checklogin()" class="govuk-button" data-module="govuk-button">Login</button>
+
+      <!-- <a id="route" href="\dashboard/supplier.html"><button class="govuk-button" data-module="govuk-button">Login</button></a> -->
+
+      <p>
+        <a href="start.html">Create an account</a>
+      </p>
+
+      <h4 class="govuk-heading-xl">
+        Problems with login
+             
+              </h4>
+              <p>
+                <a href="#">I have forgotten my password</a>
+              </p>
+              <p>
+                <a href="#">Help</a>
+              </p>
+    </div>
+  </div>
+
+{% endblock %}

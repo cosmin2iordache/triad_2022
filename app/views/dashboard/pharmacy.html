@@ -1,0 +1,348 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/start">Log out</a>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">
+    Pharmacy Account Dashboard
+         
+          </h1>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#past-day">Stock</a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#supplierorders">Supplier Orders</a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#completed">
+          Completed
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#customer">
+          Customer Orders
+        </a>
+      </li>
+     
+    </ul>
+
+
+
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2 class="govuk-heading-l">Stock Overview</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Product id</th>
+            <th scope="col" class="govuk-table__header">Product Name</th>
+            <th scope="col" class="govuk-table__header">Supplier</th>
+            <th scope="col" class="govuk-table__header">Current stock</th>
+            <th scope="col" class="govuk-table__header">Sold stock</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+            
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">20</td>
+            
+            <td class="govuk-table__cell">
+                <a href="orderdetails.html"></a>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button>
+            </a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">20</td>
+            
+            <td class="govuk-table__cell">
+                <a href="orderdetails.html"></a>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button>
+            </a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">20</td>
+            
+            <td class="govuk-table__cell">
+                <a href="orderdetails.html"></a>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button>
+            </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="supplierorders">
+      <h2 class="govuk-heading-l">Order List</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Order Id</th>
+            <th scope="col" class="govuk-table__header">Product Name</th>
+            <th scope="col" class="govuk-table__header">Supplier Name</th>
+            <th scope="col" class="govuk-table__header">Quantity Ordered</th>
+            <th scope="col" class="govuk-table__header">Ordered Date</th>
+         
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">698</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">698</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">698</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
+          </tr>
+        
+        </tbody>
+      </table>
+
+      <form action="" method="post"></form>
+  
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
+      <h2 class="govuk-heading-l">Completed Orders</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Order Id</th>
+            <th scope="col" class="govuk-table__header">Supplier Name</th>
+            <th scope="col" class="govuk-table__header">Quantity Received</th>
+            <th scope="col" class="govuk-table__header">Date Received</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button>
+            </td>
+
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button></td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+      <h2 class="govuk-heading-l">Past year</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Order Id</th>
+            <th scope="col" class="govuk-table__header">Pharmacy Name</th>
+            <th scope="col" class="govuk-table__header">Quantity</th>
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+           
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">Goots</td>
+            <td class="govuk-table__cell">25</td>
+            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+               View Details
+              </button></td>
+          </tr>
+        </tbody>
+      </table>
+    
+  
+    </div>
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="customer">
+        <h2 class="govuk-heading-l">Manage Customer Orders</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Order Id</th>
+              <th scope="col" class="govuk-table__header">Customer Name</th>
+              <th scope="col" class="govuk-table__header">Quantity</th>
+              <th scope="col" class="govuk-table__header">Collection Time</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+  
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Pharmacy One</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                <td class="govuk-table__cell"><a href="/dashboard/orderDetails"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  View Details
+                 </button></a></td>
+
+                   <td class="govuk-table__cell">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Complete
+                      </button>
+    
+                   </td>
+               </tr>
+
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Pharmacy One</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                 <td class="govuk-table__cell"><a href="/dashboard/orderDetails"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    View Details
+                   </button></a></td>
+
+                   <td class="govuk-table__cell">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Complete
+                      </button>
+    
+                   </td>
+               </tr>
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Pharmacy Two</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                <td class="govuk-table__cell"><a href="/dashboard/orderDetails"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  View Details
+                 </button></a></td>
+
+                    <td class="govuk-table__cell">COMPLETED</td>
+
+    
+                   </td>
+               </tr>
+
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Pharmacy Two</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                <td class="govuk-table__cell"><a href="/dashboard/orderDetails"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  View Details
+                 </button></a></td>
+
+                    <td class="govuk-table__cell">COMPLETED</td>
+
+    
+                   </td>
+               </tr>
+
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Pharmacy Two</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                <td class="govuk-table__cell"><a href="/dashboard/orderDetails"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  View Details
+                 </button></a></td>
+
+                    <td class="govuk-table__cell">COMPLETED</td>
+
+    
+                   </td>
+               </tr>
+          
+        
+          </tbody>
+        </table>
+      
+    
+      </div>
+  </div>
+  {% endblock %}
